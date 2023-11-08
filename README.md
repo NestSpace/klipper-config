@@ -10,6 +10,7 @@ note:
 Stallguard: 
  1) Disable Stealthchopper (set thershold 999999)
  2) Homing Speed >= 100
+ 3) Dont Do Current near to 3.000, too close to the limit causes breakdown due to current sometimes
 Rotation Distance:
   1) Pitch * Gear Count
   2) Usually Pitch is 2 (2mm for most belts)
