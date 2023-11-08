@@ -14,3 +14,8 @@ Stallguard:
 Rotation Distance:
   1) Pitch * Gear Count
   2) Usually Pitch is 2 (2mm for most belts)
+
+canbus procedure:
+1. turn on printer
+2. type `sudo ip link set can0 up type can bitrate 1000000` in terminal
+3. uuid should show up in `~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0`
