@@ -20,3 +20,10 @@ canbus procedure:
 2. type `sudo ip link set can0 txqueuelen 1000 up type can bitrate 1000000` in terminal
 3. uuid should show up in `~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0`
 4. click connect / restart in mainsail
+
+auto config can:
+/etc/network/interfaces.d/can0 is outdated; neet to use systemd-netword instead
+
+https://www.freedesktop.org/software/systemd/man/latest/systemd.network.html#%5BCAN%5D%20Section%20Options
+
+however i cant find how to set the txqueuelen in systemd, the problem is the default length is 10 which leads to disconnection after 10 seconds
