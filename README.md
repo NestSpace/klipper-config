@@ -28,6 +28,8 @@ for klipper (main board):
 
 for canboot/katapult (ebb board):
 ![image](https://cdn.discordapp.com/attachments/1170003460054319154/1172046933104279632/IMG_20231109_133445.jpg?ex=655ee4c4&is=654c6fc4&hm=ca1977ed8ba0b0e6f2ab465ed146c76e661a01ff6a94741b2d4eff991f563170&)
+
+and then flash klipper onto ebb board thru canboot, go to ~/klipper and make menuconfig same as the first image for main board except communication interface canbus PB0 PB1
 ## auto config can:
 /etc/network/interfaces.d/can0 is outdated; neet to use systemd-netword instead
 
