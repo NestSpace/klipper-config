@@ -26,4 +26,5 @@ auto config can:
 
 https://www.freedesktop.org/software/systemd/man/latest/systemd.network.html#%5BCAN%5D%20Section%20Options
 
-however i cant find how to set the txqueuelen in systemd, the problem is the default length is 10 which leads to disconnection after 10 seconds
+instructions on systemd-neteworkd: 
+https://maz0r.github.io/klipper_canbus/extras/systemd-networkd.html
