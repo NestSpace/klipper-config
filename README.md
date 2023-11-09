@@ -6,6 +6,12 @@ current: (take new photo if necessary)
 
 ![image](https://cdn.discordapp.com/attachments/1109794418808070181/1171392630295363624/IMG_20231107_181505.jpg?ex=655c8366&is=654a0e66&hm=5d8acb28575f04c8952ebb86eece0acd9427b323c684acbcea9d9ae9390e58d8&)
 
+## PINS
+
+https://github.com/bigtreetech/Octopus-Max-EZ#ocotpus_max_ez-pinout-table
+
+https://github.com/bigtreetech/EBB/tree/master#pinout-2
+
 ## note on tuning stallguard: 
 Stallguard: 
  1) Disable Stealthchopper (set thershold 999999)
