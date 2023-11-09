@@ -21,6 +21,13 @@ Rotation Distance:
 3. uuid should show up in `~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0`
 4. click connect / restart in mainsail
 
+## make menuconfig
+
+for klipper (main board):
+![image](https://cdn.discordapp.com/attachments/1170003460054319154/1172046971515707413/IMG_20231109_133602.jpg?ex=655ee4cd&is=654c6fcd&hm=3754f8f2463071f9816b71cf0c5720f1116d3726748299be8114391203fc03eb&)
+
+for canboot/katapult (ebb board):
+![image](https://cdn.discordapp.com/attachments/1170003460054319154/1172046933104279632/IMG_20231109_133445.jpg?ex=655ee4c4&is=654c6fc4&hm=ca1977ed8ba0b0e6f2ab465ed146c76e661a01ff6a94741b2d4eff991f563170&)
 ## auto config can:
 /etc/network/interfaces.d/can0 is outdated; neet to use systemd-netword instead
 
