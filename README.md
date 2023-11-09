@@ -23,13 +23,15 @@ Rotation Distance:
 
 ## make menuconfig
 
-for klipper (main board):
+for klipper (main board): copy klipper.bin to sd card and rename to firmware.bin, red light should flicker rapidly for 1 second, wait for about 1 minute
 ![image](https://cdn.discordapp.com/attachments/1170003460054319154/1172046971515707413/IMG_20231109_133602.jpg?ex=655ee4cd&is=654c6fcd&hm=3754f8f2463071f9816b71cf0c5720f1116d3726748299be8114391203fc03eb&)
 
-for canboot/katapult (ebb board):
+for canboot/katapult (ebb board): put into dfu mode, put jumper on usb 5v, connect to usb, then type `sudo dfu-util -a 0 -D ~/CanBoot/out/canboot.bin --dfuse-address 0x08000000:force:mass-erase:leave -d 0483:df11`
 ![image](https://cdn.discordapp.com/attachments/1170003460054319154/1172046933104279632/IMG_20231109_133445.jpg?ex=655ee4c4&is=654c6fc4&hm=ca1977ed8ba0b0e6f2ab465ed146c76e661a01ff6a94741b2d4eff991f563170&)
 
-and then flash klipper onto ebb board thru canboot, go to ~/klipper and make menuconfig same as the first image for main board except communication interface canbus PB0 PB1 AND 8MHZ CRYSTAL FRICK
+for klipper (ebb board): connect can cable, type `python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u MYUUID`
+
+reference: https://github.com/maz0r/klipper_canbus/blob/main/toolhead/ebb36-42_v1.1.md
 
 if frick up klipper, dont need to flash canboot again, just press reset twice and it will enter bootloader (flashing red light means its in canboot)
 ## auto config can:
