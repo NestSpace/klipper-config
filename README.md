@@ -30,7 +30,7 @@ for canboot/katapult (ebb board): put into dfu mode, put jumper on usb 5v, conne
 ![image](https://cdn.discordapp.com/attachments/1170003460054319154/1172046933104279632/IMG_20231109_133445.jpg?ex=655ee4c4&is=654c6fc4&hm=ca1977ed8ba0b0e6f2ab465ed146c76e661a01ff6a94741b2d4eff991f563170&)
 
 for klipper (ebb board): connect can cable, type `python3 ~/CanBoot/scripts/flash_can.py -i can0 -f ~/klipper/out/klipper.bin -u MYUUID`
-
+![image](https://cdn.discordapp.com/attachments/1170003460054319154/1172066185307770900/IMG_20231109_145214.jpg?ex=655ef6b2&is=654c81b2&hm=d5a715c4805ab866c3de8b67f01634db3e9106311834f0c8b5be9d2ae8208b16&)
 reference: https://github.com/maz0r/klipper_canbus/blob/main/toolhead/ebb36-42_v1.1.md
 
 if frick up klipper, dont need to flash canboot again, just press reset twice and it will enter bootloader (flashing red light means its in canboot)
