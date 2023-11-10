@@ -22,10 +22,11 @@ Rotation Distance:
   2) Usually Pitch is 2 (2mm for most belts)
 
 ## canbus procedure:
-1. turn on printer (u can skip step 2 and 3 as it is auto configured by systemd and udev now)
-2. type `sudo ip link set can0 txqueuelen 1000 up type can bitrate 1000000` in terminal
-3. uuid should show up in `~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0`
-4. click connect / restart in mainsail
+1. turn on printer (u can skip step 3 and 4 as it is auto configured by systemd and udev now)
+2. if after boot of lattepanda, type `sudo service systemd-networkd start`
+3. type `sudo ip link set can0 txqueuelen 1000 up type can bitrate 1000000` in terminal
+4. uuid should show up in `~/klippy-env/bin/python ~/klipper/scripts/canbus_query.py can0`
+5. click connect / restart in mainsail
 
 ## make menuconfig
 
