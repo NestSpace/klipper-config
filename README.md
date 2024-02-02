@@ -40,6 +40,8 @@ for klipper (ebb board): connect can cable, put jumper in 120R, type `~/klippy-e
 ![image](https://cdn.discordapp.com/attachments/1170003460054319154/1172066185307770900/IMG_20231109_145214.jpg?ex=655ef6b2&is=654c81b2&hm=d5a715c4805ab866c3de8b67f01634db3e9106311834f0c8b5be9d2ae8208b16&)
 reference: https://github.com/maz0r/klipper_canbus/blob/main/toolhead/ebb36-42_v1.1.md
 
+REMEMBER THE FAN JUMPERS (last 2, 24V)
+
 if frick up klipper, dont need to flash canboot again, just press reset twice and it will enter bootloader (flashing red light means its in canboot)
 ## auto config can:
 /etc/network/interfaces.d/can0 is outdated; neet to use systemd-netword instead
