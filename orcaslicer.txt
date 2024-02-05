@@ -1,0 +1,62 @@
+[pro tip]
+- you can compare presets by pressing the green magic wand button in orcaslicer
+
+[file description]
+- current modifications made by us
+
+[syntax]
+- nestedness
+- field: value
+- ... is shorthand for no modification
+- / is or
+- ; is comment
+- this 'language' represents our modifications, not the whole config
+
+[Voron 2.4 350 0.X nozzle]
+- Machine G-code:
+  - Machine end G-code:
+    - End G-code: 
+      PRINT_END
+      M83 G1 E-5 F2400 ; retract
+      G91              ; forgot  
+      G1 Z+5 F1500     ; z up 5
+      G90              ; forgot
+      G1 X0 F6000      ; go to 0 x axis
+      G1 Y0 F6000      ; go to 0 y axis
+  - Machine start G-code:
+    - Start G-code:
+      ...
+      M109...
+      M117    ; forgot, i think it actually does not matter
+      PRINT_START EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] ; ADD the "_TEMP"s
+      ...
+- Extruder:
+  - Retraction:
+    - Travel distance threshold: 0.1
+    
+[Voron Generic PLA]
+- Filament:
+  - Basic information:
+    - Enable pressure advance: true
+    - Flow ratio: ? ; tune yourself with orcaslicer flow calibration
+    - Pressure advance: ? ; tune yourself with orcaslicer PA calibration
+  - Print temperature:
+    - Bed temperature: 75 / 60
+    - First layer bed temperature: 75 / 60
+    - Nozzle temperature: 210 / 220
+    - First layer nozzle temperature: 210 / 220
+    
+[0.layerheight mm Standard 0.X nozzle @Voron]
+- Others:
+  - Bed adhesion:
+    - Brim type: No-brim / Auto
+    - Skirt loops: 3 ; to ensure it is extruding stuff
+- Quality:
+  - Layer height:
+    - First layer height: 0.2 ; some presets use thick first layer height? dunno why, can experiment later
+  - Ironing:
+    - Ironing speed: 100 ; vroom
+    - Ironing type: All top surfaces / All ; set depending on if you want to waste time
+  - Speed:
+    - First layer speed:
+      - First layer: 50 ; can be faster la
