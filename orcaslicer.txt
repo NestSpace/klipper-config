@@ -59,4 +59,4 @@
     - Ironing type: All top surfaces / All ; set depending on if you want to waste time
   - Speed:
     - First layer speed:
-      - First layer: 50 ; can be faster la
+      - First layer: 10 ; our printer is not good enuf yet
